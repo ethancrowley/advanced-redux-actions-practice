@@ -11,60 +11,60 @@
 
 ### Make these reducers
   * currentCount
-    * if "INCREASE_COUNTER" of "DECREASE_COUNTER" should return the current count plus one or minus one, depending on the action
-  * specialText
-    * if "SET_SPECIAL_TEXT" should return the action value
+    <!-- * if "INCREASE_COUNTER" of "DECREASE_COUNTER" should return the current count plus one or minus one, depending on the action -->
+  <!-- * specialText -->
+    <!-- * if "SET_SPECIAL_TEXT" should return the action value -->
   * currentCity
-    * if "SET_CURRENT_CITY" should return the action value
+    <!-- * if "SET_CURRENT_CITY" should return the action value -->
   * users
-    * if "REMOVE_USER" OR "ADD_USER" should return slice(1) to remove the first user or [...state,action.value] to add a user
+    <!-- * if "REMOVE_USER" OR "ADD_USER" should return slice(1) to remove the first user or [...state,action.value] to add a user -->
   * currentTemp
-    * if "SET_TEMP" should return action value
+    <!-- * if "SET_TEMP" should return action value -->
   * isLoading
-    * if "SET_IS_LOADING" should return action value  
+    <!-- * if "SET_IS_LOADING" should return action value   -->
   * videoURL
-    * if "SET_VIDEO_URL" should return action value
+    <!-- * if "SET_VIDEO_URL" should return action value -->
   * searchText
-    * if "SET_SEARCH_TEXT" should return action value
+    <!-- * if "SET_SEARCH_TEXT" should return action value -->
   * currentUserSort
-    * if "SET_CURRENT_USER_SORT" should return action value
-  * videoScale
+    <!-- * if "SET_CURRENT_USER_SORT" should return action value -->
+  <!-- * videoScale -->
     * if "SET_VIDEO_SCALE" should return action value
-### Create Actions in actions/index.js
-  * increaseCounter()
+<!-- ### Create Actions in actions/index.js -->
+  -* increaseCounter()
     * type = "INCREASE_COUNTER"
-  * decreaseCounter()
+  -* decreaseCounter()
     * type = "DECREASE_COUNTER"
-  * setSpecialText(text)
+  -* setSpecialText(text)
     * type = "SET_SPECIAL_TEXT"
     * value = text
-  * removeUser()
+  -* removeUser()
     * type = "REMOVE_USER"
-  * addUser(user)
+  -* addUser(user)
     * type = "ADD_USER"
     * value = user
-  * setSearchText(text)
+  -* setSearchText(text)
     * type = "SET_SEARCH_TEXT"
     * value = text
-  * setIsLoading(isLoading)
+-  * setIsLoading(isLoading)
     * type = "SET_IS_LOADING"
     * value = isLoading
-  * setTemp(temp)
+  --* setTemp(temp)
     * type = "SET_TEMP"
     * value = temp
-  * setCurrentCity(city)
+  -* setCurrentCity(city)
     * type = "SET_CURRENT_CITY"
     * value = city
-  * setVideoURL(URL)
+  -* setVideoURL(URL)
     * type = "SET_VIDEO_URL"
     * value = URL
-  * setCurrentUserSort(sort)
+  -* setCurrentUserSort(sort)
     * type = "SET_CURRENT_USER_SORT"
     * value = sort
-  * setVideoScale(scale)
+  -* setVideoScale(scale)
     * type = "SET_VIDEO_SCALE"
     * value = scale
-### Create Store
+<!-- ### Create Store -->
   * Create a store.js file
   * Import state from state.js
   * import createStore from redux
@@ -72,7 +72,7 @@
   * create the store
   * export the store
 
-### Provide store to components
+<!-- ### Provide store to components -->
   * In index.js
   * Import Provider from react-redux
   * Import store from store.js
@@ -95,11 +95,11 @@
 ### Create these Containers that care about what the data is
   * Import connect from react-redux into all containers
   * Import the appropriate component into the container
-  * Create mapStateToProps function 
+  * Create mapStateToProps function
   * Call the connect function
-  * SpecialTextContainer.js
+  <!-- -* SpecialTextContainer.js -->
     * map a prop called `text` to the state `specialText`
-  * UsersContainer.js
+  <!-- -* UsersContainer.js -->
     * map a prop called `users` to the state `users`
     * map a prop called `firstNameFilter` to the state `searchText`
     * map a prop called `sortOn` to the state `currentUserSort`
@@ -120,7 +120,7 @@
   * create mapDispatchToProps
   * connect the component so that it becomes a container
   * export container
-  * SpecialTextBoxContainer.js
+  -* SpecialTextBoxContainer.js
     * import `setSpecialText` action
     * map prop `set` to action `setSpecialText`
   * UserButtonsContainer.js
@@ -133,7 +133,7 @@
   * ChangeTemperatureContainer.js
     * import `setTemp` action
     * map prop `set` to action `setTemp`
-  * CounterButtonContainer.js
+  -* CounterButtonContainer.js
     * import the increaseCounter and decreaseCounter actions
     * map prop `increase` to action `increaseCounter`
     * map prop `decrease` to action `decreaseCounter`
